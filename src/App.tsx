@@ -18,6 +18,16 @@ import { defaultTheme } from './styles/themes/default'
  *    -> @types -> styled-d.ts
  */
 
+/**
+ * Modal - Modais
+ * -> em vez criar um dive que aparece na tela, que será sem acessibilidade para user
+ *    podemos usar bibliotecas que ja tem essa funcionalidades implementadas.
+ *  -> Radix (vamos usar) - componentes sem styles com funcionalidades prontas (tab, modal, etc)
+ *  -> headlessui (tailwind) - interação user
+ *  -> chakra-ui - vam com styles nos componentes
+ *  -> ariakit (criador brasileiro) - funciona super bem
+ */
+
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
