@@ -1,14 +1,20 @@
-import * as AlertDialog from '@radix-ui/react-alert-dialog'
-import { X } from 'phosphor-react'
-import { CloseButton, Content, Overlay } from './styles'
+import * as Dialog from '@radix-ui/react-dialog'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import {
+  CloseButton,
+  Content,
+  Overlay,
+  TransactionType,
+  TransactionTypeButton,
+} from './styles'
 
 export function NewTransactionModal() {
   return (
-    <AlertDialog.Portal>
+    <Dialog.Portal>
       <Overlay />
 
       <Content>
-        <AlertDialog.Title>Nova Transação</AlertDialog.Title>
+        <Dialog.Title>Nova Transação</Dialog.Title>
         <CloseButton>
           <X size={24} />
         </CloseButton>
@@ -18,9 +24,20 @@ export function NewTransactionModal() {
           <input type="number" placeholder="Preço" required />
           <input type="text" placeholder="Categoria" required />
 
+          <TransactionType>
+            <TransactionTypeButton variant="income">
+              <ArrowCircleDown size={24} />
+              Entrada
+            </TransactionTypeButton>
+            <TransactionTypeButton variant="outcome">
+              <ArrowCircleUp size={24} />
+              Saída
+            </TransactionTypeButton>
+          </TransactionType>
+
           <button type="submit">Cadastrar</button>
         </form>
       </Content>
-    </AlertDialog.Portal>
+    </Dialog.Portal>
   )
 }
