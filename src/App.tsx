@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components'
+import { TransactionsProvider } from './contexts/TransactionsContext'
 import { Transactions } from './pages/Transactions'
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
@@ -28,11 +29,27 @@ import { defaultTheme } from './styles/themes/default'
  *  -> ariakit (criador brasileiro) - funciona super bem
  */
 
+/**
+ * Ferramentas para simulação de back-end
+ *  -> json-server - disponibiliza app completas, rotas - filter, paginate, etc...
+ *
+ * -> npm i json-server -D
+ * -> criar ficheiro raiz - "server.json"
+ * -> adicionar rotas/entidades
+ *  { "transactions": [] }
+ * -> npx json-server server.json -p 3333 -w -d 500
+ *    (-p = porta, -w = watch, -d = delay request)
+ * -> adicionar package.json
+ *  -> "dev:server":"json-server server.json -p 3333 -w -d 500"
+ */
+
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <Transactions />
+      <TransactionsProvider>
+        <Transactions />
+      </TransactionsProvider>
     </ThemeProvider>
   )
 }
