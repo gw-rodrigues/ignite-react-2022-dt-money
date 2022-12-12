@@ -17,7 +17,8 @@ export function SearchForm() {
     formState: { isSubmitting },
   } = useForm<TSearchFormInputs>({ resolver: zodResolver(searchFormSchema) })
 
-  function handleSearchTransactions(data: TSearchFormInputs) {
+  async function handleSearchTransactions(data: TSearchFormInputs) {
+    await new Promise((resolve) => setTimeout(resolve, 2000))
     console.log(data)
   }
 
