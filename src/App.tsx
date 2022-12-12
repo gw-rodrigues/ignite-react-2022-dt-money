@@ -43,6 +43,17 @@ import { defaultTheme } from './styles/themes/default'
  *  -> "dev:server":"json-server server.json -p 3333 -w -d 500"
  */
 
+/**
+ * Bibliotecas de Form e Validação
+ * -> react-hook-form
+ * -> @hookform/resolvers (para poder interagir com zod)
+ * -> zod (schema do form)
+ *  -> npm i react-hook-form zod @hookform/resolvers
+ *
+ * Obs.: Sempre que vamos obter valor de componente que nao seja input - usaremos o
+ * -> control - const { control } = useForm()
+ */
+
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
