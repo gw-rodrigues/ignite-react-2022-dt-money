@@ -15,6 +15,30 @@
       "category": "Venda",
       "price": 12000,
       "createdAt": "2022-07-13T19:30:44.505Z"
+    },
+    {
+      "description": "Desenvolvimento app",
+      "type": "income",
+      "category": "Venda",
+      "price": 900,
+      "createdAt": "2023-01-12T15:55:32.508Z",
+      "id": 3
+    },
+    {
+      "description": "Iorgute",
+      "type": "outcome",
+      "category": "Comida",
+      "price": 2,
+      "createdAt": "2023-01-12T16:21:40.582Z",
+      "id": 4
+    },
+    {
+      "description": "Arroz",
+      "type": "outcome",
+      "category": "Comida",
+      "price": 10,
+      "createdAt": "2023-01-12T16:24:28.692Z",
+      "id": 5
     }
   ]
 }
