@@ -26,7 +26,9 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
   const [transactions, setTransactions] = useState<ITransactions[]>([])
 
   async function fetchTransactions(query?: string) {
-    const response = await api.get('transactions', { params: { q: query } })
+    const response = await api.get('transactions', {
+      params: { q: query, _sort: 'createdAt', _order: 'desc' },
+    })
     setTransactions(response.data)
   }
 
