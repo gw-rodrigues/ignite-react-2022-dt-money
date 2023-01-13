@@ -54,7 +54,6 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
   }, [])
 
   return (
-    // eslint-disable-next-line react/react-in-jsx-scope
     <TransactionsContext.Provider
       value={{ transactions, fetchTransactions, createTransaction }}
     >

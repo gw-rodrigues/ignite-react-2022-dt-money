@@ -10,7 +10,7 @@ import {
   TransactionType,
   TransactionTypeButton,
 } from './styles'
-import { api } from '../../lib/axios'
+
 import { useContext } from 'react'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 
